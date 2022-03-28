@@ -30,3 +30,5 @@ override.tf.json
 
 # lock file
 .terraform.lock.hcl
+
+.DS_Store
