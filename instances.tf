@@ -4,6 +4,7 @@ resource "aws_instance" "my_public_server" {
   subnet_id              = data.aws_subnet.public.id
   vpc_security_group_ids = [aws_security_group.my_public_app_sg.id]
   key_name               = var.my_keypair
+  user_data = "${file("user-data.sh")}"
 
   tags = {
     Name = "public_server"
